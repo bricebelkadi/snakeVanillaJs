@@ -7,50 +7,23 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
-        <div class ="container-fluid">
-            <div class="row title"><h1>Snake</h1></div>
-            <div class="row no-gutters">
-                <div id="snakeBox" class="col-8">
-                </div>
-                <div class="col-3 parameters d-flex">
-                    <!-- <div "> -->
-                        <form class="row parametersChanges d-flex">
-                            <label for="gridSizeInput" class="row parametersInput d-flex"><h3>Grid size :</h3>
-                                <div class="rangeInput">                        
-                                    <span class="inputOption">Small&nbsp;</span> 
-                                    <input type="range" class="custom-range" min="10" max="50" step="5" id="gridSizeInput" value="35">
-                                    <span class="inputOption">&nbsp;Big </span>
-                                    </div>
-                            </label>
-                            <label for="speedInput" class="row parametersInput d-flex"><h3>Snake speed :</h3>
-                                <div class="rangeInput">
-                                <span class="inputOption">Slow&nbsp;</span> 
-                                <input type="range" class="custom-range" min="25" max="150" step="25" id="speedInput" value="75">
-                                <span class="inputOption">&nbsp;Fast </span>
-                                </div>
-                            </label>
-                            <button type="button" class="btn btn-primary btn-lg" id="parambutton">Launch new game</button>
-                        </form>
-                    <!-- </div> -->
-                    <div class="row eatCounter">
-                        <div id="eatCount" class="align-self-center"></div>
+        <div class ="container">
+            <div class="title d-flex">	&#x2022;&#x2022;&#x2022;SNAKE&#x2022;&#x2022;&#x2022;</div>
+            <div class="row no-gutters d-flex titlerow">
+                <div id="snakeBox" class="col-8 offset-2"></div>
+            </div>
+
+
+            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="modalYouAreDead">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content d-flex">
+                        <h1>Tu es mort ! Gros nul va !</h1>
+                        <div id="finalScoreDied" class="d-flex"></div>
+                        <button type="button" class="btn btn-primary btn-lg" id="parambutton2">Launch new game</button>
+                        <div class="EnterKeyInstruction">Or touch the "Enter" Key</div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-
-<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="modalYouAreDead">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content d-flex">
-      <h1>Tu es mort ! Gros nul va !</h1>
-      <div id="finalScoreDied" class="d-flex"></div>
-      <button type="button" class="btn btn-primary btn-lg" id="parambutton2">Launch new game</button>
-      <div class="EnterKeyInstruction">Or touch the "Enter" Key</div>
-
-    </div>
-  </div>
-</div>  
+            </div>  
 
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="modalYouEatYourself">
         <div class="modal-dialog modal-xl modal-dialog-centered">
@@ -62,6 +35,47 @@
         </div>
         </div>
       </div>  
+
+      <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true" id="modalExplanation">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content d-flex">
+              <h1 class="modal-title">HOW TO PLAY</h1>
+              <ul>
+                  <li>Pause : "Space" key</li>
+                  <li>Direction : "Arrows" key</li>
+                  <li>You can define the game parameters below</li>
+              </ul>
+              <form class="row no-gutters">
+                  <div class="row parametersChanges">
+                <label for="gridSizeInput" class="col-6 parametersInput"><h5 class="inputTitle">GRID SIZE</h5>
+                    <div class="rangeInput">
+                            <span class="inputOption">Small&nbsp;</span> 
+                            <input type="range" class="custom-range" min="10" max="50" step="5" id="gridSizeInput" value="35">
+                            <span class="inputOption">&nbsp;Big </span>
+                        
+                        <button type="button" class="btn btn-primary btn-lg" id="parambutton4">Get back to the game</button>
+                        <div class="EnterKeyInstruction">Or touch the "Space" Key</div>
+
+                    </div>
+                </label>
+                <label for="speedInput" class="col-6 parametersInput"><h5 class="inputTitle">SNAKE SPEED</h5>
+                    <div class="rangeInput">
+                        <span class="inputOption">Slow&nbsp;</span> 
+                        <input type="range" class="custom-range" min="25" max="150" step="25" id="speedInput" value="75">
+                        <span class="inputOption">&nbsp;Fast </span>
+                        <button type="button" class="btn btn-primary btn-lg" id="parambutton">Launch new game</button>
+                        <div class="EnterKeyInstruction">Or touch the "Enter" Key</div>
+
+                    </div>
+                </label>
+            </div>
+            </form>
+
+
+        </div>
+        </div>
+      </div>  
+
       
 
         <script src="index.js"></script>

@@ -1,3 +1,22 @@
+body {
+    background-color: green;
+}
+
+.container {
+    margin : 30px;
+    border: 1px solid green;
+}
+
+@font-face {
+    font-family: 'jelly_craziesregular';
+    src: url('./JellyCrazies/jelly_crazies-webfont.woff2') format('woff2'),
+         url('./JellyCrazies/jelly_crazies-webfont.woff') format('woff'),
+         url('/JellyCrazies/jelly_crazies-webfont.ttf') format('truetype'),
+         url('./JellyCrazies/jelly_crazies-webfont.svg#jelly_craziesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 #snakeBox{
     display: flex;
     height: 700px;
@@ -42,53 +61,66 @@ h1 {
 
 
 .title {
-    border: 1px dashed blue;
+    font-family: 'jelly_craziesregular';
+    font-size: 55px;
+    justify-content: center;
+    margin-top: 10px;
+    letter-spacing: 12px;
 }
+
+.titlerow {
+    justify-content: center;
+}
+
 
 .parameters {
     /* border: 1px dotted violet;   */
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin : 2%;
+    /* margin : 2%; */
 
 }
 
 .parametersChanges {
-    /* border: 1px solid black;   */
-    text-align: center;
+    /* text-align: center; */
     line-height: 90px;
-    width: 100%;
     align-items: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
 
 }
 
 .eatCounter {
     /* border: 1px solid pink; */
-    padding: 2%;
+        padding: 2%;
     text-align: center;
 }
 
 .parametersInput {
     text-align: center;
-    /* border: 1px solid pink; */
+    border: 1px solid pink;
     width: 100%;
     align-items: center;
     flex-direction: column;
+}
+
+.inputTitle {
+    font-family: 'jelly_craziesregular';
+    padding-top: 10px;
 
 }
 
 .inputOption {
     font-size: 12px;
     color: darkgrey;
-    position: relative;
-    top: -7%;
+    /* position: relative;
+    top: 10000%; */
 }
 
 .modal-content {
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
 
 }
 
@@ -104,4 +136,14 @@ h1 {
 
 .EnterKeyInstruction {
     margin: 10px;
+}
+
+.modal-title {
+    font-family: 'jelly_craziesregular';
+    padding: 40px;
+}
+
+
+.rangeInput {
+    line-height: 45px;
 }

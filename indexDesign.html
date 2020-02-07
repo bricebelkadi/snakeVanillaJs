@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Titre de la page</title>
+        <link rel="stylesheet" href="styleDesign.css">
+    </head>
+    <body>
+        <div class="titleBox">	
+            <span class="title">&#x2022;&#x2022;&#x2022;SNAKE&#x2022;&#x2022;&#x2022;</span>
+        </div>
+        <div class="container">
+            <div class="sideBox"></div>
+            <div id="snakeBox"></div>
+            <div class="sideBox"></div>
+        </div>
+
+
+        <div id="modalExplain" class="modal">
+            <div class="modal-content modalContentExplain">
+                <div class="modal-title">HOW TO PLAY</div>
+                <ul>
+                    <li>Pause : "Space" key</li>
+                    <li>Direction : "Arrows" key</li>
+                </ul>
+                <form class="gameParameters">
+                    <div class="gameParametersTitle"><h4>GAME PARAMETERS</h4></div>
+                    <div class="gameParametersInput">
+                        <label for="gridSizeInput" class="labelInput"><h5 class="inputTitle">GRID SIZE</h5>
+                            <span class="inputOption">Small&nbsp;</span> 
+                            <input type="range" min="10" max="50" step="5" id="gridSizeInput" value="35"/>
+                            <span class="inputOption">&nbsp;Big </span>
+                        </label>
+                        <label for="speedInput" class="labelInput"><h5 class="inputTitle">SNAKE SPEED</h5>
+                                <span class="inputOption">Slow&nbsp;</span> 
+                                <input type="range" min="25" max="150" step="25" id="speedInput" value="75"/>
+                                <span class="inputOption">&nbsp;Fast </span>
+                        </label>
+                    </div>
+                    <div class="buttonContainer">
+                        <div class="buttonContainerEach">
+                            <button type="button" id="parambutton2">Get back to the game</button>
+                            <div class="EnterKeyInstruction">Or touch the "Space" Key</div>
+                        </div>
+                        <div class="buttonContainerEach">
+                            <button type="button" id="parambutton">Launch new game</button>
+                            <div class="EnterKeyInstruction">Or touch the "Enter" Key</div>        
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> 
+
+        <div id="modalDead" class="modal">
+            <div class="modal-content modalContentDead">
+                <div class="modal-title">YOU ARE DEAD, LOOSER</div>
+                <div id="finalScore"></div>
+                <div class="buttonContainerEach">
+                    <button type="button" id="parambutton3">Launch new game</button>
+                    <div class="EnterKeyInstruction">Or touch the "Enter" Key</div>        
+                </div>
+            </div>
+        </div> 
+
+        <script src="index.js"></script>
+    </body>
+</html>
